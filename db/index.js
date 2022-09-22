@@ -12,7 +12,7 @@ const Bookmark = db.define("bookmark", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  categoryId: Sequelize.STRING,
+  categoryID: Sequelize.STRING,
 });
 
 const Category = db.define("category", {

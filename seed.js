@@ -59,8 +59,8 @@ const seedDb = async () => {
     categoryID: code.id,
   });
 
-  //   console.log((await Bookmark.findAll()).map((bookmark) => bookmark.name));
-  //   console.log((await Category.findAll()).map((category) => category.title));
+  console.log((await Bookmark.findAll()).map((bookmark) => bookmark.name));
+  console.log((await Category.findAll()).map((category) => category.name));
 };
 
 seedDb();
