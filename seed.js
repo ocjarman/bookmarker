@@ -20,46 +20,40 @@ const seedDb = async () => {
   await Bookmark.create({
     name: "Google",
     url: "https://www.google.com/",
-    category: "search",
-    categoryID: search.id,
+    categoryId: search.id,
   });
 
   await Bookmark.create({
     name: "Stack Overflow",
     url: "https://stackoverflow.com/",
-    category: "code",
-    categoryID: code.id,
+    categoryId: code.id,
   });
 
   await Bookmark.create({
     name: "Bing",
     url: "https://www.bing.com/",
-    category: "search",
-    categoryID: search.id,
+    categoryId: search.id,
   });
 
   await Bookmark.create({
     name: "LinkedIn",
     url: "https://www.linkedin.com/",
-    category: "jobs",
-    categoryID: jobs.id,
+    categoryId: jobs.id,
   });
 
   await Bookmark.create({
     name: "Indeed",
     url: "https://www.indeed.com/",
-    category: "jobs",
-    categoryID: jobs.id,
+    categoryId: jobs.id,
   });
 
   await Bookmark.create({
     name: "MDN",
     url: "https://developer.mozilla.org/en-US/",
-    category: "code",
-    categoryID: code.id,
+    categoryId: code.id,
   });
 
-  console.log((await Bookmark.findAll()).map((bookmark) => bookmark.name));
+  // console.log((await Bookmark.findAll()).map((bookmark) => bookmark.name));
   console.log((await Category.findAll()).map((category) => category.name));
 };
 
