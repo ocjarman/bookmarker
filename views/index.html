@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Bookmarker</h1>
+    <!--New Bookmark Form-->
+    <div>
+      <form method="post" action="/bookmarks">
+        <label for="name">New Bookmark</label>
+        <input type="text" name="name" />
+        <label for="url">URL</label>
+        <input type="url" name="url" />
+        <label for="category">Category</label>
+        <select id="select" name="category">
+          ${categoryNames.map((categoryName) => `
+          <option value="${categoryName}">${categoryName}</option>
+          ` )}
+        </select>
+      </form>
+    </div>
+    <!--NEW CATEGORY FORM-->
+    <form method="post" action="/categories">
+      <label for="name">New Category</label>
+      <input type="text" name="category" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
